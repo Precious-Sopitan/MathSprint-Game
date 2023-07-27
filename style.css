@@ -1,0 +1,294 @@
+/* default set up starts here*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sprint;
+}
+
+/* default set up ends here*/
+/* font setup starts here*/
+@font-face {
+    font-family: sprint;
+    src: url(Oswald-VariableFont_wght.ttf);
+}
+
+/* font setup ends here*/
+
+/* Desktop views start here*/
+
+#mathsChoice,
+#gameDisplay,
+#result,
+#resultboard,
+#gameMode {
+    display: none;
+}
+
+#head,
+#question.current {
+    font-size: 4rem;
+    color: hotpink;
+    text-shadow: 2px 2px 2px greenyellow;
+}
+
+#homeError {
+    color: red;
+    font-style: italic;
+}
+
+#mathsChoice,
+#gameDisplay {
+    flex-direction: column;
+}
+
+#gameMode {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    align-items: center;
+
+}
+
+.mode {
+    border: 1px dotted;
+    width: 12rem;
+    text-align: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.mode:hover,
+.userChoice:hover,
+.btn-primary:hover,
+.play-again:hover,
+#true:hover,
+#false:hover,
+.btn-quit:hover {
+    color: white;
+    background-color: gray;
+    transition: 0.2s ease-in-out;
+    box-shadow: -20px 5px 45px 11px rgba(214, 214, 214, 1) inset;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    background: url(./images/sec.webp) no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 80svh;
+    background-color: white;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    width: 20rem;
+    border-radius: 1rem;
+    border: solid 1px rgb(202, 202, 202);
+    margin: 20px;
+    font-size: larger;
+    height: 3rem;
+    padding: 2px;
+}
+
+
+.btn-primary,
+.play-again,
+.btn-quit {
+    box-shadow: 0px 0px 7px inset;
+    border: none;
+    border-radius: 1rem;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: blueviolet;
+    cursor: pointer;
+    transition: 2ms;
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.action {
+    display: flex;
+    margin-top: 60px;
+}
+
+.choice-group {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: fit-content;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.userChoice {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #856aaf;
+    margin: 10px;
+    font-size: 6rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.1ms;
+}
+.mix {
+    width: 100%;
+    height: 150px;
+}
+
+#clock{
+font-size: 30px;
+font-weight: 800;
+display: flex;
+color: #856aaf;
+padding: 20px;
+border-radius: 5px;
+}
+.time-counter{
+border-radius: 3px;
+display: flex;
+width: 100px;
+justify-content: center;
+    color: white;
+        background-color: gray;
+        transition: 0.2s ease-in-out;
+        box-shadow: -20px 5px 45px 11px rgba(214, 214, 214, 1) inset;
+}
+
+.gameDisplay {
+    width: 100%;
+    height: 100%;
+}
+
+.result {
+    flex-direction: column;
+    font-size: large;
+}
+
+#game-display-body {
+    display: flex;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#usernameDisplay {
+    text-transform: capitalize;
+}
+.center{
+text-align: center;
+}
+
+#mathsChoice h1 {
+    text-align: center;
+}
+
+.answer-group{
+display: flex;
+width: 100%;
+justify-content: center;
+}
+#false,
+#true {
+    width: 10%;
+    height: 2rem;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    font-size: larger;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+    padding: 30px;
+}
+#true{
+    display: none;
+}
+
+#false {
+    background-color: red;
+}
+
+
+#true {
+    background-color: green;
+}
+
+.current {
+    display: flex !important;
+}
+.top-choice-group{
+width: 100%;
+display: flex;
+flex-direction: row;
+}
+.others-mix-group{
+width: 98%;
+
+}
+img{
+    width: 9rem;
+}
+
+@keyframes modalKeyFrame {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes gameKeyFrame {
+    from {
+        transform: translateY(500px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Desktop views ends here*/
+/* Mobile dislay here for responsiveness*/
+@media only screen and (max-width: 600px) {
+    #head {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .choice-group {
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 10px;
+    }
+
+    .userChoice {
+        background-color: white;
+    }
+    #true, #false{
+        width: 5rem;
+        font-size: large;
+    }
+}

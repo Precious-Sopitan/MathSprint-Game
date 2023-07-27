@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 id="head"> MATHS SPRINT GAME </h1>
+        <section id="homePage">
+            <input type="text" id="username" placeholder="Please Enter your Name">
+            <div id="homeError"></div>
+            <button id="enterGame" class="btn-primary">Play Game</button>
+        </section>
+        <section id="gameMode">
+            <img src="./images/good-luck-gif-4.gif" alt="">
+            <div class="mode">10 Questions</div>
+            <div class="mode">15 Questions</div>
+            <div class="mode">20 Questions</div>
+            <div class="mode">25 Questions</div>
+            <div class="mode">30 Questions</div>
+        </section>
+        <section id="mathsChoice">
+            <h1><span id="usernameDisplay"></span> <br> Choose Sprint Type</h1>
+            <div class="choice-group">
+                <div class="top-choice-group">
+                <div class="userChoice">+</div>
+                <div class="userChoice">-</div>
+                <div class="userChoice">/</div>
+                <div class="userChoice">*</div>
+                </div>
+                <div class="others-mix-group">
+                <div class="userChoice mix">Mix</div>
+
+            </div>
+        </section>
+        <section id="gameDisplay">
+            <div class="result">
+                <div id="clock">0:0:0</div>
+                <h2 class="center">You Choose: <span id="userSelection"></span></h2>
+            </div>
+            
+            <img src="./images/-25.gif" alt="">
+            <div id="game-display-body">
+
+                <!-- Questions are injected here -->
+            </div>
+            <h1>score: <span id="correctAns">0</span> / <span id="NumquestAns">0</span></h1>
+            <div class="answer-group">
+            <div id="true">True</div>
+            <div id="false">False</div>
+            </div>
+
+        </section>
+        <section id="resultboard">
+            <img src="images/congrats-15.gif" alt="">
+            <!-- this section is where user see result of game played by default its hidden from css -->
+            <div id="userInfo">user info</div>
+            <div>Total Questions Answered: <span id="totalQuestionsAnswerd">0</span></div>
+            <div>Correctly Answered: <span id="correctlyAnswerd">0</span> Questions</div>
+            <div>Wrongly Answered: <span id="questionMissed">0</span> Qestions</div>
+            <div>Time Spent: <span id="timeSpent">ms</span></div>
+            <div class="action">
+                <div class="btn play-again" onclick="playAgain()">Play Again</div>
+                <div class="btn-quit" onclick="quit()">Quit</div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
